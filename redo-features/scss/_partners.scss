@@ -1,0 +1,144 @@
+
+
+/* Partners Section */
+.partners {
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 50px;
+    position: relative; 
+    overflow: hidden ;
+}
+
+/* Ensure the slick-list allows hover banner visibility */
+.slick-list {
+    overflow: visible !important;
+}
+
+.partners img {
+    width: auto;
+    max-height: 70px;
+    flex-shrink: 0;
+    filter: grayscale(100%);
+    padding: 0 20px;
+    transition: filter 0.3s ease;
+}
+
+.partners img:hover {
+    filter: grayscale(0%);
+}
+
+/* Case study styles */
+.pictures-section .case-study {
+    position: relative;
+    display: inline-block;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+
+/* IThe hover banner */
+#global-hover-banner {
+    position: absolute;
+    line-height: 1.42857143;
+    letter-spacing: .4px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #333645;
+    color: #fff;
+    padding: 20px;
+    font-size: .875rem;
+    max-width: 280px;
+    width: 280px; 
+    margin: 0 auto 50px;
+}
+
+/* Styling for hover banner text */
+#global-hover-banner h3 {
+    letter-spacing: .4px;
+    text-align: center;
+
+    box-sizing: border-box;
+    line-height: 1.1;
+    font-weight: 400;
+    position: relative;
+    font-size: 1.125rem;
+    color: #fff;
+    margin: 0;
+}
+
+/* Arrow for box*/
+#global-hover-banner::after {
+    content: "";
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #333645; 
+    width: 0;
+    height: 0;
+    display: block;
+}
+
+/* Styling for hover banner description */
+#hover-description {
+    letter-spacing: .4px;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+    margin: 10px 10px;
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 0;
+}
+
+
+
+
+/*Issues with the boxes keeping the same legnth if only with title, this shoud fix it */
+#hover-text {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+/* Increase space between images */
+.partners .slick-slide {
+    margin: 0 15px; 
+}
+
+
+/* Button Style */
+.hover-button {
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border-radius: 3px;
+    color: #fff;
+    background-color: #2ecc71;
+    border-color: #2ecc71;
+    margin-top: 11px;
+    font-size: 16px;
+    display: flex;
+}
+
+.hover-button:hover {
+    background-color: #27b863;
+    border-color: #27b863;
+
+}
+.hover-button .icon-arrow-right {
+    margin-top: 8px; 
+
+}
+
+
+

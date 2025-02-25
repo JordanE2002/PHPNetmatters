@@ -1,0 +1,225 @@
+@import 'mixin';
+
+
+/* Slider Container */
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+/* Partners Section */
+html .slider, .slides, .slide {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+/* Slide Wrapper */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Individual Slide */
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Banner Background Style */
+.banner-background {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 550px;
+  overflow: hidden;
+}
+
+.banner-background::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(270deg, transparent 25%, #000); 
+  z-index: 1;
+  pointer-events: none; 
+}
+
+/* Banner Image Style */
+.banner-image {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  z-index: 0; 
+}
+
+/* Banner Content Container */
+.banner {
+  position: relative; 
+  z-index: 2;
+  color: white; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px; 
+}
+
+/* Banner Heading Style */
+.banner h1 {
+  letter-spacing: 0.4px;
+  margin: 0 0 1.25rem;
+  color: white;
+  font-weight: 600;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+/* Banner Paragraph Style */
+.banner p {
+  margin-bottom: 0.375rem;
+  font-size: 1.625rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  text-align: center; 
+}
+
+/* Button Style */
+.banner button {
+  letter-spacing: 0.4px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 3px;
+
+  color: white;
+  padding: 5px 20px;
+  font-size: 1.25rem;
+  line-height: 50px;
+  margin: 1.938rem 0 1.125rem;
+  cursor: pointer;
+}
+
+
+.banner-background:nth-child(2) .banner button {
+ @include first-banner-color;
+}
+
+
+.banner-background:nth-child(2) .banner button:hover {
+  @include first-hover-banner-color;
+}
+
+
+.banner-background:nth-child(3) .banner button {
+  @include second-banner-color;
+} 
+
+
+
+.banner-background:nth-child(4) .banner button {
+  @include third-banner-color;
+}
+
+.banner-background:nth-child(4) .banner button:hover {
+  @include third-hover-banner-color;
+
+}
+
+.banner-background:nth-child(5) .banner button {
+  @include forth-banner-color;
+}
+
+.banner-background:nth-child(5) .banner button:hover {
+  @include forth-hover-banner-color;
+
+}
+
+.banner-background:nth-child(6) .banner button {
+  @include fifth-banner-color;
+
+}
+
+.banner-background:nth-child(6) .banner button:hover {
+  @include fifth-hover-banner-color;
+
+}
+
+.banner-background:nth-child(7) .banner button {
+  @include sixth-banner-color;
+}
+
+.banner-background:nth-child(7) .banner button:hover {
+  @include sixth-hover-banner-color;
+}
+
+
+
+.banner-background:nth-child(8) .banner button {
+  @include seventh-banner-color;
+}
+
+.banner-background:nth-child(8) .banner button:hover {
+  @include seventh-hover-banner-color;
+}
+
+
+
+/* Arrow Icon Style */
+.icon-arrow-right {
+  margin-left: 5px; 
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .banner-background {
+    .banner {
+      p {
+        text-align: center; 
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .banner-background {
+    .banner {
+      text-align: left; 
+      align-items: flex-start; 
+ height: 600px;
+    }
+
+
+  
+    .banner p {
+      text-align: left; 
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .banner h1 {
+    font-size: 2.75rem;
+    line-height: 3.25rem; /* Reduced line height for less gap between lines */
+    margin: 0 0 1rem; /* Adjusted bottom margin for consistent spacing */
+    font-weight: 600;
+    text-align: center;
+    
+   
+  }
+   /*Height for banner on small screens */
+    .banner {
+     
+ height: 600px;
+
+
+  }
+}

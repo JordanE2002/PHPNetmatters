@@ -1,0 +1,176 @@
+.about {
+    background-color: #323544; 
+    color: #fff; 
+    padding: 50px 0;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px; 
+}
+
+.welcome-section,
+.clients-section {
+    flex: 1; 
+}
+
+/* Welcome Section */
+h1 {
+   
+    font-size: 2.25rem;
+    color: white;
+    font-weight: 600;
+    letter-spacing: .4px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    
+}
+
+.welcome-section h1{
+
+margin-bottom: 40px;
+}
+
+.clients-section h1{
+
+    margin-bottom: 40px;
+    }
+
+    p{
+    font-size: 1rem;
+    letter-spacing: .4px;
+    color: #fff;
+    line-height: 1.875rem;
+    margin-bottom: 25px;
+}
+
+
+
+/* Clients Section */
+.clients-section .testimonial {
+    margin-bottom: 20px; 
+}
+
+.clients-section .stars {
+    font-size: 1.5rem;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.clients-section p {
+    font-size: 1.3rem;
+    letter-spacing: .4px;
+    color: #fff;
+    line-height: 1.875rem;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.clients-section .testimonial span {
+    
+    font-size: 1.1rem;
+    letter-spacing: .4px;
+    line-height: 1.875rem;
+    color: #a3a8ac;
+    font-weight: 600;
+}
+
+
+/* Stars */
+.clients-section .stars {
+    font-size: 50px;
+    color: orange;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+.choose-button button {
+    font-size: 20px;
+    color: white;
+    background-color: #272936; 
+    padding: 10px 24px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 17px;
+    margin-right: 10px;
+
+    letter-spacing: .4px;
+    line-height: 35px;
+}
+ 
+
+.choose-button button:hover {
+    background-color: #444654; 
+}
+
+/* Google button used margin top as for some reason now the buttons would not line up even though it  */
+.choose-button .google {
+   
+    gap: 20px;
+    background-color: #4285F4; 
+}
+
+.choose-button .google:hover {
+    background-color: #357ae8; 
+}
+
+/* Trustpilot button */
+.choose-button .trustpilot {
+    background-color: #00b67a; 
+}
+
+.choose-button .trustpilot:hover {
+    background-color: #008c5a; 
+}
+
+
+
+
+@media (max-width: 992px) {
+    .about-row {
+        flex-direction: column; 
+        
+    }
+    
+}
+
+
+
+@media (min-width: 1260px) {
+    .about-row {
+        margin-bottom: 40px;
+    }
+    
+
+    }
+/* Ensure buttons are stacked for min-width: 992px */
+@media (min-width: 992px) {
+    .choose-button button {
+        display: block;
+
+    }
+
+    .choose-button .google {
+        margin-top: 30px; /* Ensure space between the buttons */
+        
+    }
+
+    
+}
+
+/* When screen width is 1025px or larger (buttons aligned next to each other) */
+@media (min-width: 1025px) {
+   
+    .choose-button button {
+        
+        display: inline-block; /* Ensure buttons are next to each other */
+       
+    }
+    
+}
+
+

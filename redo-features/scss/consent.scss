@@ -1,0 +1,194 @@
+
+/*Was not sure where to put contsent info, so i left it here */
+
+/* Styling for button */
+#consent {
+    position: fixed;
+    line-height: 22px;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #75788a;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+    border: solid #75788a;
+    border-width: 1px 1px 0 0;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    padding: 0 10px;
+    cursor: pointer;
+    font-size: .8rem;
+}
+
+
+
+/* Hover effort for button */
+#consent:hover {
+    background-color: #6b6d7f; 
+    border-color: #6b6d7f  
+    
+}
+
+
+
+
+#cookie-popup {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cookie-content h2 {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 400;
+    color: #333645;
+    font-size: 1.625rem;
+    margin: 0;
+    line-height: 1.42857143;
+    text-align: left;
+    position: relative; /* Required for pseudo-element positioning */
+    padding-bottom: 10px;
+}
+
+.cookie-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; /* Full width of the viewport */
+    height: 1px; /* Border thickness */
+    background-color: #ccc; /* Border color */
+    transform: translateX(-50vw); /* Center the line */
+}
+
+.cookie-content p {
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.875rem;
+    text-align: left;
+    position: relative; 
+    padding-bottom: 30px;
+}
+
+.cookie-content p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw; 
+    height: 1px; 
+    background-color: #ccc; 
+    transform: translateX(-50vw);
+}
+
+
+.cookie-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cookie-buttons button {
+    width: 48%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#change-settings {
+    background-color: #b0b0b0;
+    color: white;
+}
+
+#accept-cookies {
+    background-color: #a563c4;
+    color: white;
+}
+
+#change-settings:hover {
+    background-color: #8e8e8e;
+}
+
+#accept-cookies:hover {
+    background-color: #8947a3;
+}
+
+
+/*the block overlay */
+#blocking-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999;
+    display: none; 
+}
+
+/*The grey line issues fixed*/
+.cookie-content h2::after,
+.cookie-content p::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;  
+    width: 107%; 
+    height: 1px; 
+    background-color: #ccc; 
+    transform: translateX(-50%); 
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 480px) {
+    .cookie-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .cookie-buttons button {
+        width: 100%; 
+    }
+    #cookie-popup{
+
+    top: 50%; 
+    bottom: auto;
+    transform: translate(-50%, -50%); 
+    width: 84%; 
+    }
+}
+
+
+@media (max-width: 769px) {
+    #cookie-popup{
+     top: 50%; 
+    bottom: auto;
+    transform: translate(-50%, -50%); 
+ 
+    }
+
+}
+

@@ -1,0 +1,327 @@
+@import 'mixin';
+
+.our-services h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    color: #333645;
+    font-weight: 400;
+
+
+    
+}
+
+
+/* Top Section styles */
+.our-services-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Simple underline effect for h1 on hover */
+.our-services-top h1 {
+    position: relative;
+    display: inline-block;
+    font-size: 2.25rem;
+    color: #333645;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.our-services-top h1:hover {
+    color: #333645; 
+}
+
+.our-services-top h1:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #333645; 
+}
+.our-services-top a {
+
+
+    color: #333645; 
+    text-decoration: none; 
+}
+
+
+
+.our-services-top h2 {
+    padding-top: 30px;
+    font-size: 2.7rem;
+    line-height: 1.1;
+    color: #333645;
+    font-weight: 400;
+    margin-top: 13px;
+    margin-bottom: 15px;
+
+  
+    letter-spacing: .4px;
+    font-family: Poppins,sans-serif;
+    line-height: 1.1;
+  
+
+}
+
+
+
+
+.service-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.service {
+    display: block;
+    border: 1px solid #ccc;
+    padding: 30px;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 30px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.service p {
+    font-size: 0.8125rem;
+    font-weight: 400;
+    margin-bottom: 13px;
+    line-height: 1.375rem;
+    color: #333645;
+}
+
+.service h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    color: #333645;
+    transition: color 0.3s ease-in-out;
+}
+
+.service span {
+    display: block;
+    font-size: 2rem;
+    line-height: 62px;
+    height: 65px;
+    width: 65px;
+    margin: 0 auto 17px;
+    color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Hover for services */
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+.service:hover h2 {
+    color: white;
+}
+
+.service:hover p {
+    color: white;
+}
+
+.service:hover span {
+    background-color: white !important;
+}
+
+/* Hover Effects for each service box*/
+.software:hover span, .software-color  {
+
+    @include  icon-laptop-color;
+}
+
+.IT-support:hover span, .IT-support-color  {
+
+    @include  icon-display-color;
+}
+
+.digital-marketing:hover span, .digital-marketing-color {
+
+    @include  icon-stats-bars-color;
+}
+
+.telecoms-service:hover span, .telecoms-service-color  {
+    @include icon-phone_in_talk-color;
+
+}
+
+.web-design:hover span, .web-design-color  {
+    @include  icon-embed-color;
+}
+
+.cyber-security:hover span, .cyber-security-color {
+  @include icon-security-color;
+}
+
+.developer-training:hover span, .developer-training-color  {
+    @include  icon-graduate-color;
+}
+
+/* Service Color Classes */
+
+
+
+
+
+
+
+/* Individual Hover Backgrounds */
+.software:hover {  @include  secondary-icon-laptop-color; }
+
+
+.IT-support:hover,  .IT-support .service-button{ @include  secondary-icon-display-color; }
+.digital-marketing:hover, .digital-marketing .service-button  { @include  secondary-icon-stats-bars-color; }
+.telecoms-service:hover, .telecoms-service .service-button{ @include  secondary-icon-phone_in_talk-color; }
+.web-design:hover, .web-design .service-button { @include  secondary-icon-embed-color; }
+.cyber-security:hover, .cyber-security .service-button  { @include  secondary-icon-security-color; }
+.developer-training:hover,  .developer-training .service-button{ @include  secondary-icon-graduate-color;}
+
+/* Service Button Styles */
+.service-button {
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    color: white;
+}
+
+
+/* Default Button Colors for Each Service */
+.software .service-button { background-color: #f7b322; }
+
+/* Common hover effect for all service buttons */
+.service:hover .service-button {
+    background-color: white !important;
+ 
+}
+
+
+
+/* Hover Effects for Buttons Inside Each Service */
+.software:hover .service-button { @include service-button-laptop-color; }
+.IT-support:hover .service-button { @include service-button-display-color; }
+.digital-marketing:hover .service-button { @include service-button-stats-bars-color; }
+.telecoms-service:hover .service-button {@include service-button-phone_in_talk-color; }
+.web-design:hover .service-button { @include service-button-embed-color; }
+.cyber-security:hover .service-button { @include service-button-security-color; }
+.developer-training:hover .service-button { @include service-button-graduate-color; }
+
+/* Service Container Styles */
+.service-container { width: 100%; }
+
+/* Media Queries */
+@media (min-width: 767px) {
+    .service-list { flex-direction: row; }
+    .service-container-small {
+        width: 50%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    .service-small-1, .service-small-2, .service-small-3, .service-small-4 {
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 992px) {
+    .service-container {
+        width: 33.33333333%;
+        padding: 0 15px;
+    }
+}
+
+@media (min-width: 1260px) {
+    .service-container-small { width: 25%; }
+    .service-small-4 { padding-right: 13px; }
+}
+
+@media (max-width: 767px) {
+    .our-services-top h1 { 
+        display: none;
+     }
+}
+
+@media (min-width: 767px) {
+    .our-services-bottom { display: none;
+    
+    }
+}
+
+
+.digital-marketing-button {
+    margin-top: 20px; 
+}
+
+
+
+
+
+.our-services-bottom {
+    text-align: center; /* Ensure it's centered */
+ 
+    margin-top: 20px; /* Add spacing from the previous section */
+ 
+}
+
+/* Simple underline effect for h1 on hover */
+.our-services-bottom h1 {
+    font-size: 1.625rem; /* Adjust font size for better fit */
+    line-height: 1.1;
+    letter-spacing: .4px;
+    display: inline-block; /* Keep inline for proper alignment */
+    color: #333645;
+
+
+    margin-top: 13px;
+    margin-bottom: 15px;
+    
+}
+
+.our-services-bottom h1:hover {
+    color: #333645;
+}
+
+.our-services-bottom h1:hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #333645;
+}
+.our-services-bottom a {
+
+
+    color: #333645;
+    text-decoration: none; 
+}
+
+
+
+
+
+
