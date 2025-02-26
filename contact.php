@@ -181,6 +181,45 @@ include ("inc/header.php")
 
 
 
+<?php
+// Database connection details
+$dbhost = 'localhost';
+$dbuser = 'root';
+$dbpass = '';
+$dbname = 'PHPNetmatters';
+
+// Create connection
+$mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+}
+
+// Check if form data was sent
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $firstName = $_POST['firstName'];
+    $companyName = $_POST['companyName'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Prepare SQL query to insert form data
+    $stmt = $mysqli->prepare("INSERT INTO `contact-form` (name, companyName, email, phone_Number, message) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $firstName, $companyName, $email, $subject, $message);
+
+    // Execute the query
+    if ($stmt->execute()) {
+        echo "Your message has been sent successfully!";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close the statement and connection
+    $stmt->close();
+    $mysqli->close();
+}
+?>
 
 
 
