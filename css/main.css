@@ -1284,7 +1284,6 @@ html .slider, .slides, .slide {
 /* News styles */
 .latest-news-section {
   padding: 40px 0;
-  background-color: #f9f9f9;
 }
 
 .latest-news-section h2 {
@@ -2346,6 +2345,87 @@ footer {
     display: none;
   }
 }
+.contact-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 20px;
+  background-color: #e6e7e9;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+}
+
+.input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.input-group {
+  flex-basis: calc(50% - 20px);
+}
+
+/* Input styles*/
+input[type=text],
+input[type=email] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 98%;
+  resize: none;
+  padding: 10px;
+  border: none;
+  font-family: "Times New Roman", Times, serif;
+  border-bottom: 1px solid white;
+  box-sizing: border-box;
+}
+
+/* Button styles*/
+.contact-box button {
+  background: orange;
+  text-align: center;
+  font-weight: bold;
+  width: 100px;
+  border: none;
+  outline: none;
+  height: 35px;
+  border-radius: 30px;
+  margin-top: 20px;
+  align-self: center;
+}
+
+/* Hover effect */
+.contact-box button:hover {
+  cursor: pointer;
+}
+
+/* Button style when clicked */
+.contact-box button:active {
+  background-color: aquamarine;
+}
+
+/* Contact text styling */
+.contact-text h3 {
+  color: black;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.contact-box label:nth-of-type(2) {
+  color: red;
+}
+
 * {
   font-family: Poppins, sans-serif;
 }
