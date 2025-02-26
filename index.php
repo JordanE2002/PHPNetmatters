@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="js/slick/slick.css">
     <link rel="stylesheet" href="js/slick/slick-theme.css">
+
+
+
+    
 
     <!-- External CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -23,6 +28,7 @@
 
  
   <?php
+  
 
 
 include ("inc/header.php")

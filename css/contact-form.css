@@ -24,12 +24,11 @@
 }
 
 /* Input styles*/
-input[type=text],
-input[type=email] {
+.contact-box [type=text],
+.contact-box [type=email] {
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid white;
   box-sizing: border-box;
 }
 

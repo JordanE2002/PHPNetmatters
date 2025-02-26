@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="js/slick/slick.css">
     <link rel="stylesheet" href="js/slick/slick-theme.css">
 
+
+
+
+
+     <!-- CONTACT PAGE LINKS, TO BE ORDERED LATER -->
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/contact-top-footer.css">
+    <link rel="stylesheet" href="css/contact-form.css">
+    <link rel="stylesheet" href="css/contact-locations.css">
+
+
+
     <!-- External CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
@@ -40,99 +52,76 @@ include ("inc/header.php")
 
 
 
-
-<section class="latest-news-section">
-        <div class="container">
-            <div class="news-header">
-                <h2>Latest News</h2>
-                <h3>View all <span class="icon-arrow-right"></span></h3>
-            </div>
-           
-            <div class="news-flexbox">
-                <!-- News Card 1 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        
-                        <img src="images/casestudy-box-1.webp" alt="News Article 1">
-                        <a href="#" class="news-art-button">Career</a>
-                        
-                    </div>
-                    <div class="news-content">
-                        <h4>Business Development Executive</h4>
-                        <p>Salary Ranges: £26-£36 per Annum + Bonus
-                        Hours: 40 hours per week, Monday - Friday
-                        Location: Wymondham</p>
-
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/rebecca-moore.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Rebecca Moore</b></p>
-                            <p>16th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Card 2 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="images/casestudy-box-2.webp" alt="News Article 2">
-                        <a href="#" class="news-art-button">Career</a>
-                    </div>
-                    <div class="news-content">
-                        <h4>Web Project Manager</h4>
-                        <p>Salary Ranges: £26k-30k (DOE) + Bonus
-                        Hours: 40 hours per week, Monday - Friday
-                        Location: Cambridge</p>
-
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/bethany-shakespeare.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Bethany-Shakespeare</b></p>
-                            <p>12th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Card 3 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="images/casestudy-box-3.webp" alt="News Article 3">
-                        <a href="#" class="news-art-button">Career</a>
-                    </div>
-                    <div class="news-content">
-                        <h4>IT Support Technician</h4>
-                        <p>Salary Ranges: £24k-28k (DOE) + Bonus
-                         Hours: 40 hours per week, Monday - Friday
-                        Location: Great Yarmouth</p>
-
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/netmatters-small-logo.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Netmatters</b></p>
-                            <p>25th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- View All Link at the Bottom (for screens under 767px) -->
-<div class="view-all-container">
-    <a href="#" class="view-all-link">View All<span class="icon-arrow-right"></span></a>
-</div>
+<section class="latest-location-section">
+    <div class="container">
+        <div class="location-header">
+            <h2>Latest Locations</h2>
+            <h3>View all <span class="icon-arrow-right"></span></h3>
         </div>
-    </section>
+       
+        <div class="location-flexbox">
+            <!-- Location Card 1 -->
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="images/Cambridge.jpg" alt="Location Article 1">
+                </div>
+                <div class="location-content">
+                    <h4>Cambridge Office</h4>
+                    <p>Unit 1.31,<br>
+                    St John's Innovation Centre,<br>
+                    Cowley Road, Milton,<br>
+                    Cambridge,<br>
+                    CB4 0WS</p>
+
+                   <h5>01223 37 57 72</h5>
+
+                    <a href="#" class="location-button">VIEW MORE</a>
+                </div>
+                </div>
+            <!-- Location Card 2 -->
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="images/Wymondham.jpg" alt="Location Article 2">
+                </div>
+                <div class="location-content">
+                    <h4>Wymondham Office</h4>
+                    <p>Unit 15,<br>
+                    Penfold Drive,<br>
+                    Gateway 11 Business Park,<br>
+                    Wymondham, Norfolk,<br>
+                    NR18 0WZ</p>
+
+                    <h5>01603 70 40 20</h5>
+                    <a href="#" class="location-button">VIEW MORE</a>
+                </div>
+               
+            </div>
+            <!-- Location Card 3 -->
+            <div class="location-card">
+                <div class="location-image">
+                    <img src="images/yarmouth-2.jpg" alt="Location Article 3">
+                </div>
+                <div class="location-content">
+                    <h4>Great Yarmouth Office</h4>
+                    <p>Suite F23,<br>
+                    Beacon Innovation Centre,<br>
+                    Beacon Park, Gorleston,<br>
+                    Great Yarmouth, Norfolk,<br>
+                    NR31 7RA</p>
+
+                    <h5>01493 60 32 04</h5>
+                    <a href="#" class="location-button">VIEW MORE</a>
+                </div>
+               
+                   
+            </div>
+        </div>
+        <!-- View All Link at the Bottom (for screens under 767px) -->
+        <div class="view-all-container">
+            <a href="#" class="view-all-link">View All<span class="icon-arrow-right"></span></a>
+        </div>
+    </div>
+</section>
 
 
 
@@ -177,6 +166,8 @@ include ("inc/header.php")
             </div>
         </div>
     </div>
+
+    
 </section>
             
 
