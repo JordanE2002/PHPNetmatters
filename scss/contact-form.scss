@@ -48,16 +48,25 @@ textarea {
 
 /* Button styles*/
 .contact-box button {
-    background: orange;
+
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: 400;
     text-align: center;
-    font-weight: bold;
-    width: 100px;
-    border: none;
-    outline: none;
-    height: 35px;
-    border-radius: 30px;
-    margin-top: 20px;
-    align-self: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #333645;
+    border-color: #333645;
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+
+ 
+
+
 }
 
 /* Hover effect */

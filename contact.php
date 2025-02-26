@@ -32,7 +32,11 @@ include ("inc/header.php")
 
 
 
-
+<div class="footer-top">
+    <div class="container">
+  <p><b><a href="index.php">home</a></b>  /  Our Offices </p>
+    </div>
+</div>
 
 
 
@@ -139,53 +143,42 @@ include ("inc/header.php")
 
 <!-- Contact Section -->
 <section>
+<section>
     <div class="contact-container">
         <div class="contact-box">
             <div class="contact-text">
                 <form name="contactForm" onsubmit="return validateForm()">
                     <div class="input-row">
-
-                    
                         <div class="input-group">
-                        <label for="firstName">First Name </label>
-                         <label for="firstName">*</label>
+                            <label for="firstName">First Name </label>
+                            <label for="firstName">*</label>
                             <input type="text" name="firstName">
                         </div>
                         <div class="input-group">
-                        <label for="companyName">Last Name</label>
-                       
-                            <input type="text" name="lastName">
+                            <label for="companyName">Company Name</label>
+                            <input type="text" name="companyName">
                         </div>
-
                         <div class="input-group">
-                        <label for="email">Email</label>
-                        <label for="email">*</label>
-                            <input type="email" name = "email">
+                            <label for="email">Email</label>
+                            <label for="email">*</label>
+                            <input type="email" name="email">
                         </div>
-
-
-
                         <div class="input-group">
-                        <label for="subject">Subject</label>
-                        <label for="subject">*</label>
-                            <input type="text" name = "subject">
+                            <label for="subject">Subject</label>
+                            <label for="subject">*</label>
+                            <input type="text" name="subject">
                         </div>
-
-
                         <label for="message">Message</label>
                         <label for="message">*</label>
-                        <textarea rows="5" name = "message" ></textarea>
-
-
-                        <button type="submit" name ="formButton">Send</button>
+                        <textarea rows="5" name="message"></textarea>
+                        <button type="submit" name="formButton">Send Enquiry</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
-
-
+</section>
+            
 
 
 
