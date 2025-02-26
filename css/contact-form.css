@@ -129,4 +129,17 @@ textarea {
   color: red;
 }
 
+.contact-text p {
+  display: none; /* Initially hide the paragraph */
+}
+
+/* Styles for the heading */
+.contact-text h3#out-of-hours-heading {
+  cursor: pointer;
+}
+
+.contact-text h3#out-of-hours-heading:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=contact-form.css.map */

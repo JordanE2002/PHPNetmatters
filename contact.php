@@ -126,57 +126,62 @@ include ("inc/header.php")
 
 
 
+
+
+
 <section>
-<div class="contact-container">
+  <div class="contact-container">
     <div class="contact-box">
-        <form name="contactForm" onsubmit="return validateForm()">
-            <div class="input-row">
-                <div class="input-group">
-                    <label for="firstName">First Name </label>
-                    <label for="firstName">*</label>
-                    <input type="text" name="firstName">
-                </div>
-                <div class="input-group">
-                    <label for="companyName">Company Name</label>
-                    <input type="text" name="companyName">
-                </div>
-                <div class="input-group">
-                    <label for="email">Email</label>
-                    <label for="email">*</label>
-                    <input type="email" name="email">
-                </div>
-                <div class="input-group">
-                    <label for="subject">Subject</label>
-                    <label for="subject">*</label>
-                    <input type="text" name="subject">
-                </div>
-                <label for="message">Message</label>
-                <label for="message">*</label>
-                <textarea rows="5" name="message"></textarea>
-                <button type="submit" name="formButton">Send Enquiry</button>
-            </div>
-        </form>
+      <form name="contactForm" onsubmit="return validateForm()">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="firstName">First Name </label>
+            <label for="firstName">*</label>
+            <input type="text" name="firstName">
+          </div>
+          <div class="input-group">
+            <label for="companyName">Company Name</label>
+            <input type="text" name="companyName">
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <label for="email">*</label>
+            <input type="email" name="email">
+          </div>
+          <div class="input-group">
+            <label for="subject">Subject</label>
+            <label for="subject">*</label>
+            <input type="text" name="subject">
+          </div>
+          <label for="message">Message</label>
+          <label for="message">*</label>
+          <textarea rows="5" name="message"></textarea>
+          <button type="submit" name="formButton">Send Enquiry</button>
+        </div>
+      </form>
     </div>
 
     <!-- New Text Section -->
-
-<div class="contact-text">
-    <h3>Get in Touch</h3>
-    <h2>sales@netmatters.com</h2>
-    <h3>Business hours:</h3>
-    <h3>Monday - Friday 07:00 - 18:00 </h3>
-    <h3>Out of Hours IT Support <i class="icon-arrow-down"></i></h3>
-    <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
-
-Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00
-Sunday 10:00 - 18:00
-
-To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call. </p>
-</div>
-</div>
-
-
+    <div class="contact-text">
+      <h3>Get in Touch</h3>
+      <h2>sales@netmatters.com</h2>
+      <h3>Business hours:</h3>
+      <h3>Monday - Friday 07:00 - 18:00 </h3>
+      <h3 id="out-of-hours-heading">Out of Hours IT Support <i class="icon-arrow-down"></i></h3>
+      <p id="out-of-hours-info">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
+        Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00
+        Sunday 10:00 - 18:00
+        To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
+    </div>
+  </div>
 </section>
+
+
+
+
+
+
+
 
 
 <?php 

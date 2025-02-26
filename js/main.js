@@ -349,3 +349,19 @@ document.forms["contactForm"].onsubmit = function (event) {
         document.forms["contactForm"]["message"].style.border = "";
     }
 };
+
+
+
+
+    // Get the heading and paragraph elements
+    const outOfHoursHeading = document.getElementById('out-of-hours-heading');
+    const outOfHoursInfo = document.getElementById('out-of-hours-info');
+    
+    // Add click event listener to toggle the paragraph visibility
+    outOfHoursHeading.addEventListener('click', function() {
+        if (outOfHoursInfo.style.display === 'none' || outOfHoursInfo.style.display === '') {
+            outOfHoursInfo.style.display = 'block'; // Show the paragraph
+        } else {
+            outOfHoursInfo.style.display = 'none'; // Hide the paragraph
+        }
+    });

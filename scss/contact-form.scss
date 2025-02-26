@@ -132,3 +132,16 @@ text-decoration: underline;
 .contact-box label:nth-of-type(2) {
     color: red;
 }
+.contact-text p {
+    display: none; /* Initially hide the paragraph */
+}
+
+/* Styles for the heading */
+.contact-text h3#out-of-hours-heading {
+    cursor: pointer;
+}
+
+
+.contact-text h3#out-of-hours-heading:hover{
+    text-decoration: underline;
+}
