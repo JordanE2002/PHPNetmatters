@@ -176,8 +176,8 @@ include ("inc/header.php")
       <h2>sales@netmatters.com</h2>
       <h3>Business hours:</h3>
       <h3>Monday - Friday 07:00 - 18:00 </h3>
-      <h3 id="out-of-hours-heading">Out of Hours IT Support <i class="icon-arrow-down"></i></h3>
-      <p id="out-of-hours-info">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
+      <h3 class="out-of-hours-heading">Out of Hours IT Support <i class="icon-arrow-down"></i></h3>
+      <p class="out-of-hours-info">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
         Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00
         Sunday 10:00 - 18:00
         To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
