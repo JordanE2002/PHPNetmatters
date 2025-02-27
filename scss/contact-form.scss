@@ -2,8 +2,8 @@
     width: 80%;
     margin: 50px auto;
     display: flex;
-    justify-content: space-between; /* Space between form and text */
-    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .contact-box {
@@ -12,8 +12,8 @@
     width: 50%;
     padding: 20px;
     background-color: #e6e7e9;
-    box-sizing: border-box;
     border-radius: 10px 10px 0 0;
+    box-sizing: border-box;
 }
 
 .input-row {
@@ -27,27 +27,39 @@
 }
 
 /* Input styles */
-.contact-box [type="text"],
-.contact-box [type="email"] {
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box textarea {
     width: 100%;
     padding: 10px;
     border: none;
     box-sizing: border-box;
 }
 
-textarea {
-    width: 98%;
+.contact-box textarea {
     resize: none;
-    padding: 10px;
-    border: none;
     font-family: 'Times New Roman', Times, serif;
     border-bottom: 1px solid white;
-    box-sizing: border-box;
+    color: #555;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 1.43;
+    border-radius: 2px;
+    padding: 5px 15px;
+}
+
+/* Highlight active input fields */
+.contact-box input[type="text"]:focus,
+.contact-box input[type="email"]:focus,
+.contact-box textarea:focus {
+    outline: 0;
+    background-color: #fff;
+    border: 1px solid #5bc0de;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
 /* Button styles */
 .contact-box button {
-    box-sizing: border-box;
     font-family: inherit;
     font-weight: 400;
     text-align: center;
@@ -63,72 +75,62 @@ textarea {
     border-radius: 3px;
 }
 
-/* Hover effect */
 .contact-box button:hover {
     cursor: pointer;
 }
 
-/* Button style when clicked */
 .contact-box button:active {
     background-color: pink;
 }
 
 /* Contact text styling */
 .contact-text {
-    width: 45%; /* Space for the text */
+    width: 45%;
     font-family: 'Poppins', sans-serif;
-    color: black;
-}
-
-.contact-text h3 {
-    font-weight: 600;
-    margin-top: 0;
-}
-
-/* Ensure underline applies only to text, not the icon */
-.contact-text h3:hover:nth-last-child(1) {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-/* Prevent the icon from showing the underline */
-.contact-text h3 .icon-arrow-down {
-    display: inline-block; /* Ensures it behaves as part of the inline text */
-}
-
-.contact-text h3 .icon-arrow-down:hover {
-    text-decoration: none; /* Prevent underline on icon hover */
 }
 
 .contact-text h2 {
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    letter-spacing: .4px;
-    box-sizing: border-box;
-    background: transparent;
+    letter-spacing: 0.4px;
     text-decoration: none;
-    font-family: inherit;
-    line-height: 1.1;
-    margin: 0 0 15px;
     font-size: 1.625rem;
-    color: #926fb1!important;
+    color: #926fb1 !important;
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .contact-text h2:hover {
     text-decoration: underline;
 }
 
+.contact-text h3 {
+    font-weight: 600;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.contact-text h3:hover {
+    text-decoration: underline;
+}
+
+/* Prevent underline on icon hover */
+.contact-text h3 .icon-arrow-down {
+    display: inline-block;
+}
+
+.contact-text h3 .icon-arrow-down:hover {
+    text-decoration: none;
+}
+
 .contact-text p {
     line-height: 1.5;
-    color: black;
+    color: #666;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+    margin-right: 200px;
 }
 
-.contact-box label:nth-of-type(2) {
-    color: red;
-}
-
-/* Styles for the heading */
+/* Out-of-hours section */
 .contact-text h3.out-of-hours-heading {
     cursor: pointer;
 }
@@ -137,26 +139,61 @@ textarea {
     text-decoration: underline;
 }
 
-/* Hide only the "Out of Hours" paragraph initially */
 .out-of-hours-info {
-    display: none; /* Initially hide this specific paragraph */
+    display: none;
 }
 
-/* Keep other paragraphs visible */
-.contact-text p {
-    display: block; /* Make sure other paragraphs are visible */
-    font-family: Poppins, sans-serif;
-    font-size: 1rem;
-    letter-spacing: .4px;
-    color: #666;
-    box-sizing: border-box;
-    margin: 0 0 10px;
-    line-height: 1.875rem;
-    margin-bottom: 25px;
-    margin-right: 200px;
-}
-
-/* Ensure Out of Hours text becomes visible when clicked */
 .contact-text p.out-of-hours-info.visible {
-    display: block; /* Show when triggered */
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 1023px) {
+    .input-row {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .contact-box input[type="text"],
+    .contact-box input[type="email"],
+    .contact-box textarea {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 90%;
+    }
+
+    .contact-text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-box {
+        width: 100%;
+    }
+
+    .contact-text h3,
+    .contact-text h2,
+    .contact-text p {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Ensure "Out of Hours IT Support" section remains visible */
+    #out-of-hours-heading {
+        display: block;
+        font-weight: bold;
+    }
+
+    #out-of-hours-info {
+        display: block;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
 }

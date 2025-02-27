@@ -51,6 +51,14 @@ include ("inc/header.php")
 </div>
 
 
+<div class="footer-top2">
+    <div class="container">
+  <h1>Our offices</h1>  </>
+    </div>
+</div>
+
+
+
 
 <section class="latest-location-section">
     <div class="container">
@@ -156,7 +164,7 @@ include ("inc/header.php")
 
           <label for="message">Message</label>
           <label for="message">*</label>
-          <textarea rows="5" name="message"></textarea>
+          <textarea rows="5" name="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
           <button type="submit" name="formButton">Send Enquiry</button>
         </div>
       </form>
