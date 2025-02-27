@@ -266,30 +266,28 @@ $(document).ready(function () {
 
 
 
-
-
 function validateForm() {
     // Fetches each field item in contact
     let firstNameField = document.forms["contactForm"]["firstName"];
     let firstName = firstNameField.value;
     let emailField = document.forms["contactForm"]["email"];
     let email = emailField.value;
-    let subjectField = document.forms["contactForm"]["subject"];
-    let subject = subjectField.value;
+    let numberField = document.forms["contactForm"]["number"];
+    let number = numberField.value;
     let messageField = document.forms["contactForm"]["message"];
     let message = messageField.value;
 
-    // Regex for name, email, and phone number in subject
+    // Regex for name, email, and phone number
     const nameRegex = /^[A-Za-z]+$/;
     const emailRegex = /^[a-zA-Z0-9_+&*-]+(?:\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,7}$/;
-    const phoneRegex = /^0\d{10}$/;  // Ensures the subject is a valid phone number (starts with 0 and is 11 digits)
+    const phoneRegex = /^0\d{10}$/;  // Ensures the number is a valid phone number (starts with 0 and is 11 digits)
 
     let isValid = true; // Flag to check overall form validity
 
     // Resets any previous error styles
     firstNameField.style.border = "";
     emailField.style.border = "";
-    subjectField.style.border = "";
+    numberField.style.border = "";
     messageField.style.border = "";
 
     // If any field is completely empty, apply a red border
@@ -301,8 +299,8 @@ function validateForm() {
         emailField.style.border = "2px solid red";
         isValid = false;
     }
-    if (subject === "") {
-        subjectField.style.border = "2px solid red";
+    if (number === "") {
+        numberField.style.border = "2px solid red";
         isValid = false;
     }
     if (message === "") {
@@ -320,9 +318,9 @@ function validateForm() {
         isValid = false;
     }
 
-    // Validate that subject contains a valid phone number (using phoneRegex)
-    if (!phoneRegex.test(subject) && subject !== "") {
-        subjectField.style.border = "2px solid red";
+    // Validate that number contains a valid phone number (using phoneRegex)
+    if (!phoneRegex.test(number) && number !== "") {
+        numberField.style.border = "2px solid red";
         isValid = false;
     }
 
@@ -345,11 +343,10 @@ document.forms["contactForm"].onsubmit = function (event) {
         document.forms["contactForm"].reset(); // Reset the form after submission
         document.forms["contactForm"]["firstName"].style.border = "";
         document.forms["contactForm"]["email"].style.border = "";
-        document.forms["contactForm"]["subject"].style.border = "";
+        document.forms["contactForm"]["number"].style.border = "";
         document.forms["contactForm"]["message"].style.border = "";
     }
 };
-
 
 
 // Get the heading and the paragraph elements

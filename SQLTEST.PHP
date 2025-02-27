@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = htmlspecialchars($_POST['firstName']);
     $companyName = htmlspecialchars($_POST['companyName']);
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-    $subject = htmlspecialchars($_POST['subject']);
+    $subject = htmlspecialchars($_POST['number']);
     $message = htmlspecialchars($_POST['message']);
 
     // Validate email
@@ -69,8 +69,8 @@ $result = $mysqli->query($query);
     <label for="email">Email *</label>
     <input type="email" name="email" required><br><br>
 
-    <label for="subject">Subject *</label>
-    <input type="text" name="subject" required><br><br>
+    <label for="subject">Number *</label>
+    <input type="text" name="number" required><br><br>
 
     <label for="message">Message *</label>
     <textarea name="message" required></textarea><br><br>

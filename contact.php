@@ -149,10 +149,11 @@ include ("inc/header.php")
             <input type="email" name="email">
           </div>
           <div class="input-group">
-            <label for="subject">Subject</label>
-            <label for="subject">*</label>
-            <input type="text" name="subject">
-          </div>
+  <label for="number">Number</label>
+  <label for="number">*</label>
+  <input type="text" name="number">
+</div>
+
           <label for="message">Message</label>
           <label for="message">*</label>
           <textarea rows="5" name="message"></textarea>
