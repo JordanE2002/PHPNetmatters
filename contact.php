@@ -53,7 +53,7 @@ include ("inc/header.php")
 
 <div class="footer-top2">
     <div class="container">
-  <h1>Our offices</h1>  </>
+  <h1>Our offices</h1>
     </div>
 </div>
 
@@ -64,72 +64,51 @@ include ("inc/header.php")
     <div class="container">
         <div class="location-header">
             <h2>Latest Locations</h2>
-            <h3>View all <span class="icon-arrow-right"></span></h3>
         </div>
-       
+
         <div class="location-flexbox">
             <!-- Location Card 1 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="images/Cambridge.jpg" alt="Location Article 1">
+                    <img src="images/Cambridge.jpg" alt="Cambridge Office">
                 </div>
                 <div class="location-content">
                     <h4>Cambridge Office</h4>
-                    <p>Unit 1.31,<br>
-                    St John's Innovation Centre,<br>
-                    Cowley Road, Milton,<br>
-                    Cambridge,<br>
-                    CB4 0WS</p>
-
-                   <h5>01223 37 57 72</h5>
-
+                    <p>Unit 1.31,<br>St John's Innovation Centre,<br>Cowley Road, Milton,<br>Cambridge, CB4 0WS</p>
+                    <h5>01223 37 57 72</h5>
                     <a href="#" class="location-button">VIEW MORE</a>
                 </div>
-                </div>
+            </div>
+
             <!-- Location Card 2 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="images/Wymondham.jpg" alt="Location Article 2">
+                    <img src="images/Wymondham.jpg" alt="Wymondham Office">
                 </div>
                 <div class="location-content">
                     <h4>Wymondham Office</h4>
-                    <p>Unit 15,<br>
-                    Penfold Drive,<br>
-                    Gateway 11 Business Park,<br>
-                    Wymondham, Norfolk,<br>
-                    NR18 0WZ</p>
-
+                    <p>Unit 15,<br>Penfold Drive,<br>Gateway 11 Business Park,<br>Wymondham, Norfolk, NR18 0WZ</p>
                     <h5>01603 70 40 20</h5>
                     <a href="#" class="location-button">VIEW MORE</a>
                 </div>
-               
             </div>
+
             <!-- Location Card 3 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="images/yarmouth-2.jpg" alt="Location Article 3">
+                    <img src="images/yarmouth-2.jpg" alt="Great Yarmouth Office">
                 </div>
                 <div class="location-content">
                     <h4>Great Yarmouth Office</h4>
-                    <p>Suite F23,<br>
-                    Beacon Innovation Centre,<br>
-                    Beacon Park, Gorleston,<br>
-                    Great Yarmouth, Norfolk,<br>
-                    NR31 7RA</p>
-
+                    <p>Suite F23,<br>Beacon Innovation Centre,<br>Beacon Park, Gorleston,<br>Great Yarmouth, Norfolk, NR31 7RA</p>
                     <h5>01493 60 32 04</h5>
                     <a href="#" class="location-button">VIEW MORE</a>
                 </div>
-               
-                   
             </div>
-        </div>
-        <!-- View All Link at the Bottom (for screens under 767px) -->
-        <div class="view-all-container">
-            <a href="#" class="view-all-link">View All<span class="icon-arrow-right"></span></a>
         </div>
     </div>
 </section>
+
 
 
 
@@ -161,7 +140,7 @@ include ("inc/header.php")
   <label for="number">*</label>
   <input type="text" name="number">
 </div>
-
+           
           <label for="message">Message</label>
           <label for="message">*</label>
           <textarea rows="5" name="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
@@ -177,10 +156,10 @@ include ("inc/header.php")
       <h3>Business hours:</h3>
       <h3>Monday - Friday 07:00 - 18:00 </h3>
       <h3 class="out-of-hours-heading">Out of Hours IT Support <i class="icon-arrow-down"></i></h3>
-      <p class="out-of-hours-info">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.
-        Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00
-        Sunday 10:00 - 18:00
-        To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
+      <p class="out-of-hours-info">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+       <P class="out-of-hours-info"><b>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00 <br>  Sunday 10:00 - 18:00</b></P>
+     
+        <p class="out-of-hours-info">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
     </div>
   </div>
 </section>
