@@ -202,12 +202,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = $_POST['firstName'];
     $companyName = $_POST['companyName'];
     $email = $_POST['email'];
-    $subject = $_POST['subject'];
+    $number = $_POST['number'];
     $message = $_POST['message'];
 
     // Prepare SQL query to insert form data
-    $stmt = $mysqli->prepare("INSERT INTO `contact-form` (name, companyName, email, phone_Number, message) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $firstName, $companyName, $email, $subject, $message);
+    $stmt = $mysqli->prepare("INSERT INTO `contact-form` (fullName, companyName, email, phoneNumber, emailMessage) VALUES (?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssss", $firstName, $companyName, $email, $number, $message);
 
     // Execute the query
     if ($stmt->execute()) {
