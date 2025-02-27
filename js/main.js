@@ -264,8 +264,6 @@ $(document).ready(function () {
 
 
 
-
-
 function validateForm() {
     // Fetches each field item in contact
     let firstNameField = document.forms["contactForm"]["firstName"];
@@ -326,27 +324,20 @@ function validateForm() {
 
     // If there are any validation errors, prevent form submission
     if (!isValid) {
-        return false;
+        return false;  // This stops the form from being submitted to PHP if validation fails
     }
 
-    // If no errors, allow form submission
+    // If no errors, allow form submission (this will let PHP handle the form submission)
     return true;
 }
 
-// Clear form fields after submission
+// No changes needed here for the form reset logic
 document.forms["contactForm"].onsubmit = function (event) {
     if (!validateForm()) {
         event.preventDefault();  // Prevent form submission if validation fails
-    } else {
-        event.preventDefault();
-        alert("Contact form submitted successfully!");
-        document.forms["contactForm"].reset(); // Reset the form after submission
-        document.forms["contactForm"]["firstName"].style.border = "";
-        document.forms["contactForm"]["email"].style.border = "";
-        document.forms["contactForm"]["number"].style.border = "";
-        document.forms["contactForm"]["message"].style.border = "";
     }
 };
+
 
 
 // Get the heading and the paragraph elements

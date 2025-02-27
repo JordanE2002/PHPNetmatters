@@ -132,7 +132,7 @@ include ("inc/header.php")
 <section>
   <div class="contact-container">
     <div class="contact-box">
-      <form name="contactForm" onsubmit="return validateForm()">
+      <form name="contactForm" method="POST" onsubmit="return validateForm()">
         <div class="input-row">
           <div class="input-group">
             <label for="firstName">First Name </label>
@@ -206,7 +206,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Prepare SQL query to insert form data
-    $stmt = $mysqli->prepare("INSERT INTO `contact-form` (fullName, companyName, email, phoneNumber, emailMessage) VALUES (?, ?, ?, ?, ?)");
+    $stmt = $mysqli->prepare("INSERT INTO contactform (fullName, companyName, email, phoneNumber, emailMessage) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $firstName, $companyName, $email, $number, $message);
 
     // Execute the query
