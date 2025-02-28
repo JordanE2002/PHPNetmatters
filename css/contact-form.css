@@ -184,12 +184,14 @@
   .contact-text h2,
   .contact-text p {
     display: block;
-    margin: 10px 0;
+    margin: 15px 0;
+    text-align: left;
   }
   /* Ensure "Out of Hours IT Support" Section Remains Visible */
   .out-of-hours-heading {
     display: block;
     font-weight: bold;
+    margin-top: 0;
   }
   .out-of-hours-info {
     display: block;

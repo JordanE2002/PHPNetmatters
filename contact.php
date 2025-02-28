@@ -151,7 +151,7 @@ include ("inc/header.php")
 
     <!-- New Text Section -->
     <div class="contact-text">
-      <h3>Get in Touch</h3>
+      <h3>Email us on:</h3>
       <h2>sales@netmatters.com</h2>
       <h3>Business hours:</h3>
       <h3>Monday - Friday 07:00 - 18:00 </h3>
@@ -167,9 +167,7 @@ include ("inc/header.php")
 
 
 
-
-
-<?php
+<?php 
 // Database connection details
 $dbhost = 'localhost';
 $dbuser = 'root';
@@ -184,7 +182,7 @@ if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
 
-// Check if form data was sent
+// Check if form data was sent via POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $firstName = $_POST['firstName'];
     $companyName = $_POST['companyName'];
@@ -196,10 +194,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt = $mysqli->prepare("INSERT INTO contactform (fullName, companyName, email, phoneNumber, emailMessage) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $firstName, $companyName, $email, $number, $message);
 
-    // Execute the query
+    // Execute the query and check if successful
     if ($stmt->execute()) {
+        // Send success response back to the client (AJAX)
         echo "Your message has been sent successfully!";
     } else {
+        // Send error response back to the client (AJAX)
         echo "Error: " . $stmt->error;
     }
 
@@ -208,6 +208,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mysqli->close();
 }
 ?>
+
 
 
 

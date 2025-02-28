@@ -140,11 +140,19 @@
 }
 
 @media (max-width: 1024px) and (min-width: 768px) {
-  .location-card {
-    flex: 1 1 calc(50% - 20px);
+  .location-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
   }
+  /* Update the location-card to take full width */
+  .location-card {
+    flex: 1 1 100%; /* Make each card take up the full width */
+  }
+  /* Ensure all cards are visible */
   .location-flexbox .location-card:nth-child(3) {
-    display: none;
+    display: block; /* Ensure the third card is shown */
   }
 }
 @media (max-width: 767px) {

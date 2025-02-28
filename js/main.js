@@ -360,3 +360,33 @@ outOfHoursHeading.addEventListener('click', function() {
         }
     });
 });
+// Modify the form submission with AJAX
+document.forms["contactForm"].onsubmit = function (event) {
+    event.preventDefault(); // Prevent form submission
+    
+    // Validate the form
+    if (!validateForm()) {
+        return; // Stop the process if validation fails
+    }
+
+    // Gather form data
+    const formData = new FormData(document.forms["contactForm"]);
+    
+    // Make AJAX request
+    $.ajax({
+        url: 'contact.php', // This is where the form data will be sent
+        type: 'POST',
+        data: formData,
+        processData: false, // Don't process the data
+        contentType: false, // Don't set content type
+        success: function(response) {
+            // Handle success response (this will be returned from PHP)
+            alert("Your message has been sent successfully!");
+            document.forms["contactForm"].reset(); // Reset the form
+        },
+        error: function() {
+            // Handle error response
+            alert("There was an error with your submission. Please try again.");
+        }
+    });
+};
