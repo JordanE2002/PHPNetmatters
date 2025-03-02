@@ -214,5 +214,14 @@
     margin-left: -12px;
   }
 }
+.success-banner {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  display: none;
+}
 
 /*# sourceMappingURL=contact-form.css.map */

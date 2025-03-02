@@ -263,8 +263,29 @@ $(document).ready(function () {
 });
 
 
+// Get the heading and the paragraph elements
+const outOfHoursHeading = document.querySelector('.out-of-hours-heading');
+const outOfHoursInfo = document.querySelectorAll('.out-of-hours-info');
 
-function validateForm() {
+// Set the paragraphs to be hidden initially
+outOfHoursInfo.forEach(function(paragraph) {
+    paragraph.style.display = 'none'; // Hide the paragraph by default
+});
+
+// Add click event listener to toggle the paragraph visibility
+outOfHoursHeading.addEventListener('click', function() {
+    outOfHoursInfo.forEach(function(paragraph) {
+        // Toggle visibility by changing the display style
+        if (paragraph.style.display === 'none') {
+            paragraph.style.display = 'block'; // Show the paragraph
+        } else {
+            paragraph.style.display = 'none'; // Hide the paragraph
+        }
+    });
+});
+
+
+function validateForm() { 
     // Fetches each field item in contact
     let firstNameField = document.forms["contactForm"]["firstName"];
     let firstName = firstNameField.value;
@@ -333,36 +354,7 @@ function validateForm() {
 
 // No changes needed here for the form reset logic
 document.forms["contactForm"].onsubmit = function (event) {
-    if (!validateForm()) {
-        event.preventDefault();  // Prevent form submission if validation fails
-    }
-};
-
-
-
-// Get the heading and the paragraph elements
-const outOfHoursHeading = document.querySelector('.out-of-hours-heading');
-const outOfHoursInfo = document.querySelectorAll('.out-of-hours-info');
-
-// Set the paragraphs to be hidden initially
-outOfHoursInfo.forEach(function(paragraph) {
-    paragraph.style.display = 'none'; // Hide the paragraph by default
-});
-
-// Add click event listener to toggle the paragraph visibility
-outOfHoursHeading.addEventListener('click', function() {
-    outOfHoursInfo.forEach(function(paragraph) {
-        // Toggle visibility by changing the display style
-        if (paragraph.style.display === 'none') {
-            paragraph.style.display = 'block'; // Show the paragraph
-        } else {
-            paragraph.style.display = 'none'; // Hide the paragraph
-        }
-    });
-});
-// Modify the form submission with AJAX
-document.forms["contactForm"].onsubmit = function (event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();  // Prevent form submission
     
     // Validate the form
     if (!validateForm()) {
@@ -380,13 +372,21 @@ document.forms["contactForm"].onsubmit = function (event) {
         processData: false, // Don't process the data
         contentType: false, // Don't set content type
         success: function(response) {
-            // Handle success response (this will be returned from PHP)
-            alert("Your message has been sent successfully!");
-            document.forms["contactForm"].reset(); // Reset the form
+            // On success, show the success banner
+            const successBanner = document.getElementById('success-banner');
+            successBanner.style.display = 'block'; // Show the banner
+    
+            // Reset the form
+            document.forms["contactForm"].reset();
+    
+            // Set a timeout to hide the banner after 5 seconds (5000 ms)
+            setTimeout(function() {
+                successBanner.style.display = 'none'; // Hide the banner
+            }, 5000);
         },
         error: function() {
             // Handle error response
-            alert("There was an error with your submission. Please try again.");
+            console.log("There was an error with your submission. Please try again.");
         }
     });
-};
+}
