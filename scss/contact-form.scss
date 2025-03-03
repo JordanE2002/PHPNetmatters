@@ -136,6 +136,16 @@
     margin-right: 200px;
 }
 
+.contact-text p:nth-of-type(2) {
+    line-height: 1.5;
+    color: black;
+    font-size: 1rem;
+    letter-spacing: 0.4px;
+    margin-bottom: 25px;
+    margin-right: 200px;
+}
+
+
 /* Out-of-Hours Section */
 .contact-text h3.out-of-hours-heading,
 .contact-text h2.out-of-hours-heading {
@@ -153,6 +163,8 @@
 .contact-text p.out-of-hours-info.visible {
     display: block;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 1023px) {
@@ -240,4 +252,51 @@
     border-radius: 5px;
     margin-bottom: 15px;
     display: none;
+}
+
+
+.termsConditions {
+    
+    font-family: Poppins,sans-serif;
+    font-size: 1rem;
+    letter-spacing: .4px;
+    font-weight: 600;
+    color: #333645;
+    line-height: 32px;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 10000px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.policyPrivacy{
+
+    line-height: 1.42857143;
+    font-family: Poppins,sans-serif;
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    color: #333645;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.policyPrivacy u{
+    cursor: pointer;
+}
+
+.fieldsRequired {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 1.42857143;
+    font-family: Poppins,sans-serif;
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    font-size: 85%;
+    color: #333645;
+ 
 }

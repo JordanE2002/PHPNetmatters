@@ -141,10 +141,18 @@ include ("inc/header.php")
   <label for="number">*</label>
   <input type="text" name="number">
 </div>
+      
            
           <label for="message">Message</label>
           <label for="message">*</label>
           <textarea rows="5" name="message">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+          
+          <div>
+          <p class="termsConditions">Please tick this box if you wish to receive marketing information from us. Please see our <u>Privacy Policy</u> for more information on how we keep your data safe.</p>
+          </div>
+<p class = "policyPrivacy">This site is protected by reCAPTCHA and the Google <u>Privacy Policy</u> and <u>Terms of Service</u> apply.
+</div>
+</p>
           <button type="submit" name="formButton">Send Enquiry</button>
         </div>
       </form>
