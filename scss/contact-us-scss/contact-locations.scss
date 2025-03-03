@@ -1,0 +1,218 @@
+/* Location styles */
+.latest-location-section {
+    padding: 40px 0;
+    
+}
+
+.latest-location-section h2 {
+    letter-spacing: .4px;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+    font-size: 2.25rem;
+    box-sizing: border-box;
+    font-weight: 600;
+    color: #333645;
+    text-align: left;
+
+}
+
+
+
+.latest-location-section h5 {
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+letter-spacing: .4px;
+
+box-sizing: border-box;
+background: transparent;
+text-decoration: none;
+font-family: inherit;
+line-height: 1.1;
+margin: 0 0 15px;
+font-size: 1.625rem;
+color: #926fb1!important;
+font-weight: 700;
+
+padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+
+
+
+/* New styles for heading alignment */
+.location-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.location-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* The rest of the styles remain unchanged */
+.location-card {
+    flex: 1 1 calc(33.333% - 20px); 
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.location-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    object-fit: cover;
+    
+}
+
+
+.location-image img:hover {
+   cursor: pointer;
+    
+}
+
+.location-content {
+    padding: 15px;
+}
+
+.location-content h4 {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    letter-spacing: .4px;
+margin-left: 5px 0;
+    font-family: inherit;
+    line-height: 1.1;
+    font-size: 1.25rem;
+    box-sizing: border-box;
+    background: transparent;
+    color: #333645;
+    text-decoration: none;
+    font-weight: 400;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.location-content p {
+
+    box-sizing: border-box;
+    letter-spacing: 0.4px;
+    line-height: 1.375rem;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.location-button {
+    font-family: Poppins, sans-serif;
+    letter-spacing: .4px;
+    box-sizing: border-box;
+    background: transparent;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    user-select: none;
+    height: auto;
+    line-height: 35px;
+    padding: 5px 25px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+    color: #fff;
+
+    font-weight: 400;
+    margin-left: 4%;
+    background-color: #926fb1; 
+    border-color: #926fb1;
+}
+
+
+
+
+.location-footer {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-top: 10px;
+    position: relative;
+}
+
+
+
+@media (max-width: 1023px) and (min-width: 768px) {
+    .location-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    /* Update the location-card to take full width */
+    .location-card {
+        flex: 1 1 100%;  /* Make each card take up the full width */
+    }
+
+    /* Ensure all cards are visible */
+    .location-flexbox .location-card:nth-child(3) {
+        display: block; /* Ensure the third card is shown */
+    }
+}
+
+
+@media (max-width: 767px) {
+    h3 {
+        display: none;
+    }
+    
+    .location-flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+
+    .location-card {
+        flex: 1 1 48%; 
+    }
+}
+
+
+
+.location-card:nth-child(3) .location-art-button {
+    background-color: #db8c0d; 
+}
+
+.location-art-button:hover {
+    text-decoration: underline;
+}
+
+.location-image {
+    position: relative;
+    overflow: hidden;
+}
+
