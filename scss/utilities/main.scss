@@ -1,31 +1,16 @@
-@import 'layout';
+@import '../layout';
+@import '../_header';
+@import '../banner';
+@import '../sidebar';
+@import '../service';
+@import '../partners';
+@import '../news';
+@import '../about';
+@import '../footer';
+@import '../consent';
+@import '../dropdown';
 
 
-
-@import 'header';
-
-@import 'banner';
-
-@import 'sidebar';
-
-@import 'service';
-
-
-
-@import 'partners';
-@import 'news';
-
-
-@import 'about';
-@import 'footer';
-@import 'consent';
-
-
-
-@import 'dropdown';
-
-
-@import 'mixin';
 
 
 
@@ -50,11 +35,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?f5hu2r');
-  src:  url('../fonts/icomoon.eot?f5hu2r#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?f5hu2r') format('truetype'),
-    url('../fonts/icomoon.woff?f5hu2r') format('woff'),
-    url('../fonts/icomoon.svg?f5hu2r#icomoon') format('svg');
+  src: url('../../fonts/icomoon.eot?f5hu2r');
+  src:  url('../../fonts/icomoon.eot?f5hu2r#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?f5hu2r') format('truetype'),
+    url('../../fonts/icomoon.woff?f5hu2r') format('woff'),
+    url('../../fonts/icomoon.svg?f5hu2r#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

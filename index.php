@@ -8,7 +8,7 @@
     <meta name="ROBOTS" content="NOINDEX,NOFOLLOW">
     <title>Full Service Digital Agency | Cambridgeshire & Norfolk | Netmatters</title>
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/utilities/main.css">
     <link rel="stylesheet" href="js/slick/slick.css">
     <link rel="stylesheet" href="js/slick/slick-theme.css">
 
