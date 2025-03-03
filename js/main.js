@@ -187,20 +187,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function applyHoverEffect(caseStudy) {
         caseStudy.addEventListener('mouseenter', function () {
+            // Ensure the hovered element is actually visible
+            if (!caseStudy.offsetParent) return;
+
             const hoverContent = caseStudy.getAttribute('data-hover');
             const description = caseStudy.getAttribute('data-description');
 
-            if (hoverContent) {
-                hoverText.textContent = hoverContent;
-            } else {
-                hoverText.textContent = ''; // Clear text if hoverContent is not available
+            // Hide the banner if the hover content contains "boying"
+            if (hoverContent && hoverContent.toLowerCase().includes('boying')) {
+                hoverBanner.style.opacity = '0';
+                return;
             }
 
-            if (description) {
-                hoverDescription.textContent = description;
-            } else {
-                hoverDescription.textContent = ''; // Clear description if not available
-            }
+            hoverText.textContent = hoverContent || ''; // Set or clear text
+            hoverDescription.textContent = description || ''; // Set or clear description
 
             const caseStudyRect = caseStudy.getBoundingClientRect();
             hoverBanner.style.opacity = '1';
@@ -214,20 +214,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Apply hover effect to all case studies, including Slick duplicates
+    // Apply hover effect only to visible case studies
     function applyHoverToAllSlides() {
-        const caseStudies = document.querySelectorAll('.case-study, .slick-cloned');
+        const caseStudies = document.querySelectorAll('.case-study');
         caseStudies.forEach(applyHoverEffect);
     }
 
     applyHoverToAllSlides(); // Apply initially
 
-    // Reapply hover effect after Slick initializes
+    // Reapply hover effect after Slick initializes, but only for visible slides
     $('.partners').on('init reInit afterChange', function () {
+        hoverBanner.style.opacity = '0'; // Hide banner on slide change
         applyHoverToAllSlides();
     });
 });
-
 
 // Initialize Slick
 $(document).ready(function () {

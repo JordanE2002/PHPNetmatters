@@ -54,6 +54,10 @@
     margin: 0 auto 50px;
 }
 
+#global-hover-banner .partners {
+ display: none;
+}
+
 /* Styling for hover banner text */
 #global-hover-banner h3 {
     letter-spacing: .4px;
@@ -109,32 +113,9 @@
 }
 
 
-/* Button Style */
-.hover-button {
-    letter-spacing: .4px;
-    box-sizing: border-box;
-    font-weight: 400;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 1px solid transparent;
-    line-height: 35px;
-    padding: 5px 15px;
-    text-transform: uppercase;
-    border-radius: 3px;
-    color: #fff;
-    background-color: #2ecc71;
-    border-color: #2ecc71;
-    margin-top: 11px;
-    font-size: 16px;
-    display: flex;
-}
 
-.hover-button:hover {
-    background-color: #27b863;
-    border-color: #27b863;
 
-}
+
 .hover-button .icon-arrow-right {
     margin-top: 8px; 
 
