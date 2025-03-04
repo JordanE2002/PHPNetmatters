@@ -13,7 +13,7 @@
                     </div>
     
                     <div class="header-btn-contact-container">
-                        <a href="#" class="header-contact-button"><span class="icon-paperplane "></span> Contact</a>
+                        <a href="contact.php" class="header-contact-button"><span class="icon-paperplane "></span> Contact</a>
                     </div>
     
                     <div class="header-phone-container">
