@@ -2,6 +2,7 @@
 // Load Composer's autoloader
 require_once __DIR__ . '../vendor/autoload.php';
 
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
@@ -15,7 +16,7 @@ $password = $_ENV['DB_PASSWORD'];
 // Create a MySQLi connection
 $mysqli = new mysqli($host, $username, $password, $dbname, $port);
 
-
+// Check connection
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
