@@ -1,16 +1,21 @@
 <?php
-// Database connection details
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$dbname = 'PHPNetmatters';
+// Load Composer's autoloader
+require_once __DIR__ . '../vendor/autoload.php';
 
-#
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-// Create connection
-$mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+// Database connection details from .env
+$host = $_ENV['DB_HOST'];
+$port = $_ENV['DB_PORT'];
+$dbname = $_ENV['DB_DATABASE'];
+$username = $_ENV['DB_USERNAME'];
+$password = $_ENV['DB_PASSWORD'];
 
-// Check connection
+// Create a MySQLi connection
+$mysqli = new mysqli($host, $username, $password, $dbname, $port);
+
+
 if ($mysqli->connect_error) {
     die("Connection failed: " . $mysqli->connect_error);
 }
@@ -58,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Message is required.";
     }
 
-    // If there are errors, display them and stop execution
+    // If there are errors, display them
     if (!empty($errors)) {
         foreach ($errors as $error) {
             echo "<p>Error: $error</p>";
@@ -75,12 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<p>Error: " . $stmt->error . "</p>";
         }
 
-        // Close the statement and connection
+        // Close the statement
         $stmt->close();
     }
 
     // Close the database connection
     $mysqli->close();
 }
-?>
-
