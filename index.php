@@ -269,98 +269,13 @@ include ("inc/header.php")
         </div>
     </section>
 
-    <section class="latest-news-section">
-        <div class="container">
-            <div class="news-header">
-                <h2>Latest News</h2>
-                <h3>View all <span class="icon-arrow-right"></span></h3>
-            </div>
-           
-            <div class="news-flexbox">
-                <!-- News Card 1 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        
-                        <img src="images/casestudy-box-1.webp" alt="News Article 1">
-                        <a href="#" class="news-art-button">Career</a>
-                        
-                    </div>
-                    <div class="news-content">
-                        <h4>Business Development Executive</h4>
-                        <p>Salary Ranges: £26-£36 per Annum + Bonus
-                        Hours: 40 hours per week, Monday - Friday
-                        Location: Wymondham</p>
+    <?php
 
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/rebecca-moore.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Rebecca Moore</b></p>
-                            <p>16th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Card 2 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="images/casestudy-box-2.webp" alt="News Article 2">
-                        <a href="#" class="news-art-button">Career</a>
-                    </div>
-                    <div class="news-content">
-                        <h4>Web Project Manager</h4>
-                        <p>Salary Ranges: £26k-30k (DOE) + Bonus
-                        Hours: 40 hours per week, Monday - Friday
-                        Location: Cambridge</p>
 
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/bethany-shakespeare.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Bethany-Shakespeare</b></p>
-                            <p>12th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Card 3 -->
-                <div class="news-card">
-                    <div class="news-image">
-                        <img src="images/casestudy-box-3.webp" alt="News Article 3">
-                        <a href="#" class="news-art-button">Career</a>
-                    </div>
-                    <div class="news-content">
-                        <h4>IT Support Technician</h4>
-                        <p>Salary Ranges: £24k-28k (DOE) + Bonus
-                         Hours: 40 hours per week, Monday - Friday
-                        Location: Great Yarmouth</p>
+include ("inc/news.php")
 
-                        <br>
-                        <a href="#" class="news-button">Read More</a>
-                    </div>
-                    <div class="news-footer">
-                        <div class="author-image">
-                            <img src="images/netmatters-small-logo.webp" alt="Author">
-                        </div>
-                        <div class="author-info">
-                            <p><b>Posted by Netmatters</b></p>
-                            <p>25th November 2024</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- View All Link at the Bottom (for screens under 767px) -->
-<div class="view-all-container">
-    <a href="#" class="view-all-link">View All<span class="icon-arrow-right"></span></a>
-</div>
-        </div>
-    </section>
+
+?>
 
     
     <div class="partners pictures-section">
