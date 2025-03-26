@@ -279,7 +279,7 @@ include ("inc/news.php")
 
     
     <div class="partners pictures-section">
-        <div class="case-study" data-hover="GDST" data-description="The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools." data-button="View Our case study">
+        <div class="case-study" data-hover="GDST" data-description="The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools." >
             <div class="case-study-content">
                 <img src="images/casestudy-girls_day_school_trust_logob.webp" alt="ISO 2015" class="hidden-image">
             </div>

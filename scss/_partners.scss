@@ -62,6 +62,7 @@
 #global-hover-banner h3 {
     letter-spacing: .4px;
     text-align: center;
+    overflow: visible !important;
 
     box-sizing: border-box;
     line-height: 1.1;
@@ -72,20 +73,22 @@
     margin: 0;
 }
 
-/* Arrow for box*/
+/* Arrow for box - Ensuring it stays inside the hover box */
 #global-hover-banner::after {
     content: "";
     position: absolute;
-    bottom: -30px; 
+    bottom: 0px; /* Change from -30px to 0px to keep it inside */
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(100%); /* Moves the arrow correctly */
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
-    border-top: 30px solid #333645; 
+    border-top: 30px solid #333645;
     width: 0;
     height: 0;
     display: block;
+  
 }
+
 
 /* Styling for hover banner description */
 #hover-description {
@@ -123,3 +126,9 @@
 
 
 
+@media (max-width: 768px) {
+    #hover-text {
+        display: block !important;  /* Force visibility */
+     
+    }
+}
