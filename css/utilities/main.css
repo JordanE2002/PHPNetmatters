@@ -1260,13 +1260,9 @@ html .slider, .slides, .slide {
   margin: 0 15px;
 }
 
-.hover-button .icon-arrow-right {
-  margin-top: 8px;
-}
-
 @media (max-width: 768px) {
   #hover-text {
-    display: block !important; /* Force visibility */
+    display: block; /* Force visibility */
   }
 }
 /* News styles */
@@ -1690,6 +1686,7 @@ footer {
   color: white;
   padding: 30px 0 0;
   position: relative;
+  overflow: hidden !important;
 }
 
 .footer-row {
@@ -1834,6 +1831,15 @@ footer {
   .footer-menu {
     flex: 1;
     margin-bottom: 0; /* Remove margin for better alignment */
+  }
+}
+@media (max-width: 1024px) {
+  .footer-menu {
+    width: 25%; /* Ensures 4 equal columns */
+  }
+  .footer-logo {
+    width: 100%; /* Keeps the logo and social media separate above */
+    margin-bottom: 20px;
   }
 }
 /* Footer Bottom */

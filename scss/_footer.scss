@@ -3,6 +3,7 @@ footer {
    color: white;
    padding: 30px 0 0;
    position: relative;
+   overflow: hidden !important;
 }
 
 .footer-row {
@@ -172,9 +173,38 @@ footer {
 }
 
 
-@media (min-width: 1023px) {
-   
+@media  (max-width: 1024px) {
+
+
+   .footer-menu {
+       width: 25%; /* Ensures 4 equal columns */
+   }
+
+   .footer-logo {
+       width: 100%; /* Keeps the logo and social media separate above */
+      
+       margin-bottom: 20px;
+   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Footer Bottom */
 .footer-bottom {
@@ -243,3 +273,7 @@ footer {
    text-decoration: underline;
 }
 }
+
+
+
+

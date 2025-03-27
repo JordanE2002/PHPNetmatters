@@ -167,6 +167,8 @@ document.addEventListener('click', function (event) {
     }
 });
 
+
+
 // Close the menu and overlay when pressing ESC
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Escape') {
@@ -180,6 +182,10 @@ document.addEventListener('keydown', function (event) {
         hamburger.setAttribute('aria-expanded', false);
     }
 });
+
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
@@ -261,6 +267,18 @@ $(document).ready(function () {
         ],
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Get the heading and the paragraph elements
