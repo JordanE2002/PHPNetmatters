@@ -278,54 +278,50 @@ include ("inc/news.php")
 ?>
 
     
-    <div class="partners pictures-section">
-        <div class="case-study" data-hover="GDST" data-description="The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools." data-button="View Our case study">
-            <div class="case-study-content">
-                <img src="images/casestudy-girls_day_school_trust_logob.webp" alt="ISO 2015" class="hidden-image">
-            </div>
+<div class="partners pictures-section">
+    <div class="case-study" data-hover="GDST" data-description="The Girls' Day School Trust (GDST) is the UK's leading family of 25 independent girls' schools." data-button="View Our case study">
+        <div class="case-study-content">
+            <img src="images/casestudy-girls_day_school_trust_logob.webp" alt="ISO 2015" class="hidden-image">
         </div>
-
-        
-        
-        <div class="case-study" data-hover="Bussey's" data-description="One of the UK's leading Ford dealerships." >
-            <div class="case-study-content">
-                <img src="images/casestudy_Busseye.png" alt="Busseye" class="hidden-image">
-            </div>
-        </div>
-
-        <div class="case-study" data-hover="Crane Garden Buildings" data-description="Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK ">
-            <div class="case-study-content">
-                <img src="images/casestudy_crane.webp" alt="Crane" class="hidden-image">
-            </div>
-        </div>
-
-        <div class="case-study" data-hover="Beat" data-description="The UK's eating disorder charity founded in 1989." data-button="View our case study">
-            <div class="case-study-content">
-                <img src="images/casestudy_beat_logo.webp" alt="Beat" class="hidden-image">
-            </div>
-        </div>
-
-        <div class="case-study" data-hover="Sweetzy" data-description="Sweetzy are an online sweets retailer, based in Wymondham."  data-button= "View our case study">
-            <div class="case-study-content">
-                <img src="images/casestudy_Sweetzy.png" alt="Busseye" class="hidden-image">
-            </div>
-        </div>
-
-    
-        <div class="case-study" data-hover="Project Six" data-description="This is a description of Project Five.">
-            <div class="case-study-content">
-                <img src="images/casestudy_xupes_logo.webp" alt="Busseye" class="hidden-image">
-            </div>
-        </div>
-
-        
     </div>
-    
-    <div id="global-hover-banner" class="hover-banner">
-        <h3 id="hover-text"></h3>
-        <p id="hover-description"></p> 
+
+    <div class="case-study" data-hover="Bussey's" data-description="One of the UK's leading Ford dealerships.">
+        <div class="case-study-content">
+            <img src="images/casestudy_Busseye.png" alt="Busseye" class="hidden-image">
+        </div>
     </div>
-    
+
+    <div class="case-study" data-hover="Crane Garden Buildings" data-description="Leading manufacturer and supplier of high-end garden rooms, summerhouses, workshops and sheds in the UK">
+        <div class="case-study-content">
+            <img src="images/casestudy_crane.webp" alt="Crane" class="hidden-image">
+        </div>
+    </div>
+
+    <div class="case-study" data-hover="Beat" data-description="The UK's eating disorder charity founded in 1989." data-button="View our case study">
+        <div class="case-study-content">
+            <img src="images/casestudy_beat_logo.webp" alt="Beat" class="hidden-image">
+        </div>
+    </div>
+
+    <div class="case-study" data-hover="Sweetzy" data-description="Sweetzy are an online sweets retailer, based in Wymondham." data-button="View our case study">
+        <div class="case-study-content">
+            <img src="images/casestudy_Sweetzy.png" alt="Sweetzy" class="hidden-image">
+        </div>
+    </div>
+
+    <div class="case-study" data-hover="Project Six" data-description="This is a description of Project Five.">
+        <div class="case-study-content">
+            <img src="images/casestudy_xupes_logo.webp" alt="Project Six" class="hidden-image">
+        </div>
+    </div>
+</div>
+
+<div id="global-hover-banner" class="hover-banner">
+    <h3 id="hover-text"></h3>
+    <p id="hover-description"></p>
+    <button id="hover-button" class="hover-button" style="display:none;"></button>
+</div>
+
 
     <?php 
 include 'inc/footer.php'

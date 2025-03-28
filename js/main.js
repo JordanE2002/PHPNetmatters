@@ -190,14 +190,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
     const hoverDescription = document.getElementById('hover-description');
+    const hoverButton = document.getElementById('hover-button');
 
     function applyHoverEffect(caseStudy) {
+        // Event listener for mouse enter
         caseStudy.addEventListener('mouseenter', function () {
             // Ensure the hovered element is actually visible
             if (!caseStudy.offsetParent) return;
 
             const hoverContent = caseStudy.getAttribute('data-hover');
             const description = caseStudy.getAttribute('data-description');
+            const buttonText = caseStudy.getAttribute('data-button'); // Get the button text
 
             // Hide the banner if the hover content contains "boying"
             if (hoverContent && hoverContent.toLowerCase().includes('boying')) {
@@ -208,6 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
             hoverText.textContent = hoverContent || ''; // Set or clear text
             hoverDescription.textContent = description || ''; // Set or clear description
 
+            if (buttonText) {
+                hoverButton.textContent = buttonText; // Set the button text
+                hoverButton.style.display = 'inline-block'; // Show the button
+            } else {
+                hoverButton.style.display = 'none'; // Hide the button if not present
+            }
+
             const caseStudyRect = caseStudy.getBoundingClientRect();
             hoverBanner.style.opacity = '1';
             hoverBanner.style.left = `${caseStudyRect.left + window.scrollX + (caseStudyRect.width / 2) - (hoverBanner.offsetWidth / 2)}px`;
@@ -215,7 +225,21 @@ document.addEventListener('DOMContentLoaded', function () {
             hoverBanner.style.transform = 'translateY(0)';
         });
 
+        // Event listener for mouse leave
         caseStudy.addEventListener('mouseleave', function () {
+            // Only hide the hover banner if the mouse is not hovering over it.
+            if (!hoverBanner.matches(':hover')) {
+                hoverBanner.style.opacity = '0';
+            }
+        });
+
+        // Keep hover box visible when hovering over the hover box itself
+        hoverBanner.addEventListener('mouseenter', function () {
+            hoverBanner.style.opacity = '1';
+        });
+
+        // Hide hover box when leaving the hover box
+        hoverBanner.addEventListener('mouseleave', function () {
             hoverBanner.style.opacity = '0';
         });
     }
@@ -234,6 +258,7 @@ document.addEventListener('DOMContentLoaded', function () {
         applyHoverToAllSlides();
     });
 });
+
 
 // Initialize Slick
 $(document).ready(function () {
