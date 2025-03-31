@@ -185,7 +185,6 @@ document.addEventListener('keydown', function (event) {
 
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const hoverBanner = document.getElementById('global-hover-banner');
     const hoverText = document.getElementById('hover-text');
@@ -201,11 +200,22 @@ document.addEventListener('DOMContentLoaded', function () {
             const hoverContent = caseStudy.getAttribute('data-hover');
             const description = caseStudy.getAttribute('data-description');
             const buttonText = caseStudy.getAttribute('data-button'); // Get the button text
+            let buttonColor = ''; // Default empty color
+            let buttonHoverColor = ''; // Default hover color
 
-            // Hide the banner if the hover content contains "boying"
-            if (hoverContent && hoverContent.toLowerCase().includes('boying')) {
-                hoverBanner.style.opacity = '0';
-                return;
+            // Check for specific button color attributes and set the button color
+            if (caseStudy.hasAttribute('data-button-blue')) {
+                buttonColor = '#3498db'; // Blue color
+                buttonHoverColor = '#2980b9'; // Darker blue for hover
+            } else if (caseStudy.hasAttribute('data-button-purple')) {
+                buttonColor = '#9b59b6'; // Purple color
+                buttonHoverColor = '#8e44ad'; // Darker purple for hover
+            } else if (caseStudy.hasAttribute('data-button-green')) {
+                buttonColor = '#2ecc71'; // Green color
+                buttonHoverColor = '#26ab5f'; // Darker green for hover
+            } else if (caseStudy.hasAttribute('data-button-yellow')) {
+                buttonColor = '#f7b322'; // Yellow color
+                buttonHoverColor = '#e8a008'; // Darker yellow for hover
             }
 
             hoverText.textContent = hoverContent || ''; // Set or clear text
@@ -216,6 +226,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 hoverButton.style.display = 'inline-block'; // Show the button
             } else {
                 hoverButton.style.display = 'none'; // Hide the button if not present
+            }
+
+            // Apply the dynamic button color if found
+            if (buttonColor) {
+                hoverButton.style.backgroundColor = buttonColor;
+                hoverButton.style.borderColor = buttonColor;
+
+                // Hover effect for the button
+                hoverButton.addEventListener('mouseover', function () {
+                    hoverButton.style.backgroundColor = buttonHoverColor;
+                    hoverButton.style.borderColor = buttonHoverColor;
+                });
+
+                hoverButton.addEventListener('mouseout', function () {
+                    hoverButton.style.backgroundColor = buttonColor;
+                    hoverButton.style.borderColor = buttonColor;
+                });
             }
 
             const caseStudyRect = caseStudy.getBoundingClientRect();
@@ -258,8 +285,6 @@ document.addEventListener('DOMContentLoaded', function () {
         applyHoverToAllSlides();
     });
 });
-
-
 // Initialize Slick
 $(document).ready(function () {
     $('.partners').slick({
